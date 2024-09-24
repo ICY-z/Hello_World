@@ -1,11 +1,17 @@
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 # Create your views here.
 
-def homeView(request):
-    message = ' hello world'
+# def homeView(request):
+#     message = ' hello world'
 
-    return HttpResponse(message) # returning httpresponse object 
+#     return HttpResponse(message) # returning httpresponse object 
+
+class homeView(TemplateView):
+        template='index.html'
+
+
 
 def aboutView(request):
         message = 'this is about section of our project'
