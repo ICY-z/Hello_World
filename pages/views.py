@@ -9,23 +9,15 @@ from django.views.generic import TemplateView
 #     return HttpResponse(message) # returning httpresponse object 
 
 class homeView(TemplateView):
-        template='index.html'
+        template_name ='index.html'
 
 
 
-def aboutView(request):
-        message = 'this is about section of our project'
+class aboutView(TemplateView):
+        template_name = 'about.html'
 
-        return HttpResponse(message)
+class contactView(TemplateView):
+        template_name = 'contact.html'
 
-def contactView(request):
-        message = 'this is the contact section of the page'
-
-         
-        return HttpResponse(message)
-
-def cartView(request):
-        message = 'this is the cart section of the page'
-       
-        
-        return HttpResponse(message)
+class cartView(TemplateView):
+        template_name = 'cart.html'

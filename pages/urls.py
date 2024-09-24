@@ -6,8 +6,8 @@ from pages.views import cartView , include
 
 urlpattrens = [
     path('home/', homeView.as_view()),
-    path('about/', aboutView),
-    path('contact/',contactView),
-    path('cart/',cartView),
+    path('about/', aboutView.as_view()),
+    path('contact/',contactView.as_view()),
+    path('cart/',cartView.as_view()),
     path('',include('pages.urls'))
 ]
