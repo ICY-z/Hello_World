@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 # Create your views here.
@@ -8,16 +9,18 @@ from django.views.generic import TemplateView
 
 #     return HttpResponse(message) # returning httpresponse object 
 
-class homeView(TemplateView):
+class HomeView(TemplateView):
         template_name ='index.html'
 
 
 
-class aboutView(TemplateView):
-        template_name = 'about.html'
+# class aboutView(TemplateView):
+#         template_name = 'about.html'
 
-class contactView(TemplateView):
+def aboutView(request):
+        return render(request,'about.html')
+class ContactView(TemplateView):
         template_name = 'contact.html'
 
-class cartView(TemplateView):
+class CartView(TemplateView):
         template_name = 'cart.html'
